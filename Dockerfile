@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+MAINTAINER "jakbutler"
+
 RUN apt-get update && apt-get install -y wget git inotify-tools rsync ssh vim && \
   rm -rf /var/lib/apt/lists/* && \
   mkdir -p /opt && \
