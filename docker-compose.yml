@@ -1,0 +1,13 @@
+version: "2.3"
+services:
+  osync:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: osync
+    restart: always
+    volumes:
+      - "/root/.ssh:/root/.ssh"
+      - "${PWD}/primary:/data/primary"
+      - "${PWD}/secondary:/data/secondary"
+      # - ${PWD}/osync/conf:/config/
